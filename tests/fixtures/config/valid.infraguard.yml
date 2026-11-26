@@ -1,0 +1,15 @@
+version: 1
+ignore_rules:
+  - IG-DKR-003
+  - ig-tf-006
+ignore_paths:
+  - "examples/**"
+  - "**/*.test.tf"
+severity_overrides:
+  IG-CMP-004: error
+thresholds:
+  max_volume_gb: 300
+  ec2_min_size: 2xlarge
+  rds_min_size: 8xlarge
+  max_monthly_cost_usd: 1500
+fail_on_severity: warning

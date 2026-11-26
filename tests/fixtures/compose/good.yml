@@ -1,0 +1,27 @@
+x-defaults: &defaults
+  user: "1000:1000"
+  deploy:
+    resources:
+      limits:
+        cpus: "0.50"
+        memory: 512M
+
+services:
+  web:
+    <<: *defaults
+    image: nginx:1.25.4-alpine
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 30s
+      retries: 3
+
+  worker:
+    build: .
+    user: "1000:1000"
+    healthcheck:
+      test: ["CMD", "node", "health.js"]
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1G

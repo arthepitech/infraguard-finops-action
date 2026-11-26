@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  cache:
+    image: redis:7.2-alpine
+    user: "999:999"
+    cpus: 0.25
+    mem_limit: 256m
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]

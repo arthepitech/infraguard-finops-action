@@ -1,0 +1,18 @@
+[
+  {
+    "id": 101,
+    "body": "<!-- infraguard-report -->\nHuman quoting the marker",
+    "user": {
+      "type": "User",
+      "login": "alice"
+    }
+  },
+  {
+    "id": 202,
+    "body": "<!-- infraguard-report -->\n## 🛡️ InfraGuard FinOps & Security — Rapport\nOld report",
+    "user": {
+      "type": "Bot",
+      "login": "github-actions[bot]"
+    }
+  }
+]

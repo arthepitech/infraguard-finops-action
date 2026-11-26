@@ -1,0 +1,46 @@
+{
+  "name": "infraguard-finops-action",
+  "version": "1.0.0",
+  "description": "FinOps & security audit for Docker, Compose and Terraform in PRs: cloud cost drift, bad practices, exposed secrets.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --noEmit && ncc build src/main.ts -o dist --source-map --license licenses.txt",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "lint": "eslint --no-error-on-unmatched-pattern src tests",
+    "format:check": "prettier --check --no-error-on-unmatched-pattern \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "all": "npm run lint && npm test && npm run build"
+  },
+  "keywords": [
+    "finops",
+    "cloud-cost",
+    "terraform",
+    "dockerfile",
+    "docker-compose",
+    "devsecops",
+    "secret-scanning",
+    "github-action"
+  ],
+  "author": "InfraGuard",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+    "minimatch": "^11.0.9",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.11",
+    "@typescript-eslint/eslint-plugin": "^8.74.0",
+    "@typescript-eslint/parser": "^8.74.0",
+    "@vercel/ncc": "^0.45.0",
+    "@vitest/coverage-v8": "^4.1.12",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.12"
+  }
+}

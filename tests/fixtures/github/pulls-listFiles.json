@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "Dockerfile",
+    "status": "modified",
+    "patch": "@@ -1,2 +1,2 @@\n-FROM node:20-alpine\n+FROM node:latest"
+  },
+  {
+    "filename": "old.Dockerfile",
+    "status": "removed"
+  },
+  {
+    "filename": "huge.tf",
+    "status": "added"
+  },
+  {
+    "filename": "logo.bin",
+    "status": "added"
+  }
+]

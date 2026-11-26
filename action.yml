@@ -1,0 +1,39 @@
+name: 'InfraGuard FinOps & Security'
+description: 'FinOps & security audit for Docker, Compose and Terraform in PRs: cloud cost drift, bad practices, exposed secrets.'
+author: 'InfraGuard'
+branding:
+  icon: 'shield'
+  color: 'green'
+inputs:
+  github_token:
+    description: 'Token pour lire la PR et commenter'
+    required: false
+    default: '${{ github.token }}'
+  license_key:
+    description: 'Clé de licence Pro Polar.sh (vide = Free)'
+    required: false
+    default: ''
+  fail_on_error:
+    description: 'Pro : échoue le job si finding de sévérité error (true/false)'
+    required: false
+    default: 'false'
+  config_path:
+    description: 'Pro : chemin du fichier de config'
+    required: false
+    default: '.infraguard.yml'
+  comment:
+    description: 'Poster/mettre à jour le commentaire PR (true/false)'
+    required: false
+    default: 'true'
+outputs:
+  tier:
+    description: 'free | pro'
+  findings_count:
+    description: 'Nombre total de findings'
+  errors_count:
+    description: 'Nombre de findings sévérité error'
+  estimated_monthly_cost_usd:
+    description: 'Surcoût mensuel estimé (Pro, sinon 0)'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

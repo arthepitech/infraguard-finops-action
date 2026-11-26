@@ -1,0 +1,15 @@
+services:
+  api:
+    image: node:latest
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres
+    user: root
+    healthcheck:
+      disable: true
+    deploy:
+      resources:
+        limits:
+          memory: 512M

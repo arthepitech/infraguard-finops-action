@@ -1,0 +1,55 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renderMarkdownReport > matches snapshot for Free tier report with Docker findings and upsell 1`] = `
+"<!-- infraguard-report -->
+## 🛡️ InfraGuard FinOps & Security — Rapport
+
+**Plan :** Free · **Fichiers analysés :** 2 · **Findings :** 2
+| 🔴 Errors | 🟠 Warnings | 🔵 Infos | 💸 Surcoût mensuel estimé |
+|:--:|:--:|:--:|:--:|
+| 0 | 1 | 1 | — (Pro) |
+
+### 🐳 Docker & Compose
+| Sév. | Règle | Fichier | Ligne | Problème | Remédiation |
+|:--:|---|---|:--:|---|---|
+| 🟠 | \`IG-DKR-001\` | \`Dockerfile\` | 1 | Image de base non épinglée (\`node:latest\`). | Épinglez une version précise. |
+| 🔵 | \`IG-DKR-003\` | \`Dockerfile\` | 1 | Aucun HEALTHCHECK défini. | Ajoutez HEALTHCHECK. |
+
+<details><summary>ℹ️ Détails & limites</summary>
+
+Estimations de coûts indicatives (on-demand us-east-1, 730 h/mois). Règles ignorées : aucune.
+</details>
+
+> 🔒 **Débloquez Terraform, détection de secrets, \`.infraguard.yml\` et \`fail_on_error\` avec InfraGuard Pro** → [COLLE_TON_CHECKOUT_URL_POLAR_ICI]
+
+<sub>InfraGuard FinOps & Security v0.1.0 · 2026-11-26 12:00:00 UTC</sub>
+"
+`;
+
+exports[`renderMarkdownReport > matches snapshot for Pro tier report (with fail-open badge, Terraform, and Secrets) 1`] = `
+"<!-- infraguard-report -->
+## 🛡️ InfraGuard FinOps & Security — Rapport
+
+**Plan :** Pro (licence non vérifiée) · **Fichiers analysés :** 3 · **Findings :** 2
+| 🔴 Errors | 🟠 Warnings | 🔵 Infos | 💸 Surcoût mensuel estimé |
+|:--:|:--:|:--:|:--:|
+| 2 | 0 | 0 | ≈ $2 234 /mois |
+
+### ☁️ Terraform (Pro)
+| Sév. | Règle | Fichier:Ligne | Ressource | Surcoût/mois | Remédiation |
+|:--:|---|---|---|--:|---|
+| 🔴 | \`IG-TF-001\` | \`infra/main.tf:12\` | \`aws_instance.gpu\` | ~$2 234 | Préférez Spot ou une instance plus petite. |
+
+### 🔑 Secrets exposés (Pro)
+| Sév. | Règle | Fichier:Ligne | Valeur (masquée) | Remédiation |
+|:--:|---|---|---|---|
+| 🔴 | \`IG-SEC-001\` | \`.env:3\` | \`AKIA************XYZ1\` | Révoquez la clé dans IAM. |
+
+<details><summary>ℹ️ Détails & limites</summary>
+
+Estimations de coûts indicatives (on-demand us-east-1, 730 h/mois). Règles ignorées : IG-DKR-003.
+</details>
+
+<sub>InfraGuard FinOps & Security v0.1.0 · 2026-11-26 12:00:00 UTC</sub>
+"
+`;
