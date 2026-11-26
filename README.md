@@ -111,7 +111,7 @@ Exact layout posted as a single, self-updating comment on your Pull Request:
 | **Custom `.infraguard.yml`** (`ignore_rules`, `ignore_paths`, `severity_overrides`, custom thresholds & budget cap `IG-FIN-001`) | — | ✅ |
 | **CI Merge Blocking** (`fail_on_error: true` + `fail_on_severity: error \| warning`) | — | ✅ |
 
-👉 **[Upgrade to InfraGuard Pro → Get your license key]([COLLE_TON_CHECKOUT_URL_POLAR_ICI])**
+👉 **[Upgrade to InfraGuard Pro → Get your license key](https://buy.polar.sh/polar_cl_1vY1xdhWPozSZfAU1VtaBbJC71nMOpuUl4ple4GQQPC)**
 
 ---
 

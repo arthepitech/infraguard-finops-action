@@ -3,7 +3,8 @@ import { Finding, Severity, Tier } from '../types';
 
 export const REPORT_MARKER = '<!-- infraguard-report -->';
 export const MAX_REPORT_LENGTH = 60_000;
-export const PRO_UPSELL_URL = '[COLLE_TON_CHECKOUT_URL_POLAR_ICI]';
+export const PRO_UPSELL_URL =
+  'https://buy.polar.sh/polar_cl_1vY1xdhWPozSZfAU1VtaBbJC71nMOpuUl4ple4GQQPC';
 
 const SEVERITY_ICON: Record<Severity, string> = {
   error: '🔴',

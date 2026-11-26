@@ -32380,7 +32380,7 @@ exports.renderMarkdownReport = renderMarkdownReport;
 const filter_1 = __nccwpck_require__(5902);
 exports.REPORT_MARKER = '<!-- infraguard-report -->';
 exports.MAX_REPORT_LENGTH = 60_000;
-exports.PRO_UPSELL_URL = '[COLLE_TON_CHECKOUT_URL_POLAR_ICI]';
+exports.PRO_UPSELL_URL = 'https://buy.polar.sh/polar_cl_1vY1xdhWPozSZfAU1VtaBbJC71nMOpuUl4ple4GQQPC';
 const SEVERITY_ICON = {
     error: '🔴',
     warning: '🟠',
